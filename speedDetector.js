@@ -1,14 +1,16 @@
+//ment to suspended an over speeding drivers lisence
 const input = require('readline').createInterface({
     input: process.stdin,
     output: process.stdout
 
 })
+const calculateDemeritPoints = (speed) => {
+    const speedlimit = 70;
+    const pointsPerExcessSpeeed = 1;
 
-
-function speedDetector(speed) {
-    if (speed <= 70) {
+    if (speed <= speedLimit) {
         return 'ok'
-    } else if (speed > 70 && speed < 75) {
+    } if (speed > 70 && speed < 75) {
         return ' one Demerit earned'
     } else if (speed > 80 && speed < 85) {
         return ' 3 Demerits earned'
@@ -34,7 +36,8 @@ function speedDetector(speed) {
         return 'license suspended!
 
     }
-}
+
+
     //ensures speed is a number
     const speed = Number{ speed }
     //input question
@@ -44,7 +47,7 @@ function speedDetector(speed) {
         if (isNaN(speed) || speed < 0) {
             console.log('please enter a valid speed')
         } else {
-    
+
         }
     })
 
