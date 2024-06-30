@@ -10,6 +10,9 @@ i used a readline prompt to  create an input for users
 ## challenge 2 
 input for user to input their speed
 created a range of speed and demerits issued
-
+## challenge 3
+i  made a structure that determines how much tax an individual should contribute 
+ i made sure the tax is not negative
+ i scripted a fucftioon that calculates net salary
 
 
