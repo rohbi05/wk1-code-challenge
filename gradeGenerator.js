@@ -1,3 +1,4 @@
+//creates an input for user
 const input = require('readline').createInterface({
     input: process.stdin,
     output: process.stdout
@@ -15,11 +16,11 @@ function awardGrade(marks) {
         return 'C'
     } else if (marks >= 40 && marks <= 49) {
         return 'D'
-    } else {
+    } else { marks <40
         return 'E'
     }
 }
-
+//input question
 input.question('enter student marks: ', function (score) {
     const mark = Number(score)
     if (isNaN(mark)) {
@@ -32,3 +33,4 @@ input.question('enter student marks: ', function (score) {
     input.close()
 
 }) 
+ 
