@@ -1,4 +1,4 @@
-/*this function determines an individual's tax contribution based on his/her gross salary*/
+/*this function determines an individual's NHIF contribution based on his/her gross salary*/
 const calculatetax = (grossSalary) => {
     if (grossSalary >= 0 && grossSalary <= 5999) {
       return 150;
@@ -69,9 +69,8 @@ const calculatetax = (grossSalary) => {
     const grossSalary = basicSalary + benefits;
     const nssfDeduction = calculateNSSF(grossSalary);
     const taxableIncome = grossSalary - nssfDeduction;
-    const paye = calculatePAYE(taxableIncome);
     const nhifDeduction = calculateNHIF(grossSalary);
-    const netSalary = grossSalary - nssfDeduction - paye - nhifDeduction;
+    const netSalary = grossSalary - nssfDeduction  - nhifDeduction;
     return netSalary;
   };
   
