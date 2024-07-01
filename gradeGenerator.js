@@ -2,9 +2,11 @@
 
 
 function awardGrade() {
-    const input = prompt("Weka marks: ")
+    const input = prompt(" input marks marks: ")
         if (input > 100 || input < 0) {
             return 'invalid mark'
+        }else if (isNaN(input)) {
+            return( " enter valid marks")
         }
         if (input > 79) {
             return 'A'

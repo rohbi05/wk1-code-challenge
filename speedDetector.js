@@ -1,73 +1,38 @@
 //ment to suspended an over speeding drivers lisence
-const input = require('readline').createInterface({
-    input: process.stdin,
-    output: process.stdout
 
-})
-const calculateDemeritPoints = (speed) => {
-    const speedlimit = 70;
-    const pointsPerExcessSpeeed = 1;
+const calculateDemeritPoints = () => {
+        const input = prompt("input speed")
+    const speedLimit = 70;
 
-    if (speed <= speedLimit) {
+    if (isNaN(input) || input < 0) {
+        console.log('please enter a valid speed')
+    }else if (input<= speedLimit) {
         return 'ok'
-    } if (speed > 70 && speed < 75) {
+    } else if (input > 70 && input <=75) {
         return ' one Demerit earned'
-    } else if (speed > 80 && speed < 85) {
+    }else if (input > 75 && input<=80){
+        return '2 Demerits earned'
+    } else if (input >80 && input <= 85) {
         return ' 3 Demerits earned'
-    } else if (speed > 85 && speed < 90) {
+    } else if (input >85 && input <=90) {
         return ' 4 Demerits earned'
-    } else if (speed > 90 && speed < 95) {
+    } else if (input > 90 && input<=95) {
         return ' 5 Demerits earned'
-    } else if (speed > 95 && speed < 100) {
+    } else if (input >95 && input <=100) {
         return ' 6 Demerits earned'
-    } else if (speed > 100 && speed < 105) {
+    } else if (input > 100 && input<=105) {
         return ' 7 Demerits earned'
-    } else if (speed > 105 && speed < 110) {
+    } else if (input > 105 && input <=110) {
         return ' 8 Demerits earned'
-    } else if (speed > 110 && speed < 115) {
+    } else if (input > 110 && input <=115) {
         return ' 9 Demerits earned'
-    } else if (speed > 115 && speed < 120) {
+    } else if (input > 115 && input <=120) {
         return ' 10 Demerits earned'
-    } else if (speed > 120 && speed < 125) {
+    } else if (input > 120 && input <=125) {
         return ' 11 Demerits earned'
-    } else if (speed > 125 && speed < 130) {
+    } else if (input > 125 && input <=130) {
         return ' 12 Demerits earned'
-    } else {
-        return 'license suspended!
-
+    } else if (input >130) { 
+        return 'license suspended!'
     }
-
-
-    //ensures speed is a number
-    const speed = Number{ speed }
-    //input question
-    input.question(`enter speed :`, function (speed) {
-        const speed = Number(speed)
-
-        if (isNaN(speed) || speed < 0) {
-            console.log('please enter a valid speed')
-        } else {
-
-        }
-    })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
